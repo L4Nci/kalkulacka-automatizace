@@ -58,8 +58,8 @@ function App() {
   const savings = calculateSavings(Number(hoursPerUnit) || 0, Number(hourlyRate) || 0, timeUnit)
 
   return (
-    <div className="min-h-screen bg-gray-100 py-6 px-3 sm:py-12 sm:px-6 lg:px-8">
-      <div className="max-w-xl mx-auto bg-white rounded-2xl sm:rounded-3xl shadow-custom p-5 sm:p-8 lg:p-12">
+    <div className="min-h-screen bg-white py-6 px-3 sm:py-12 sm:px-6 lg:px-8">
+      <div className="max-w-xl mx-auto bg-white rounded-2xl sm:rounded-3xl border border-gray-200 p-5 sm:p-8 lg:p-12">
         <div className="text-center mb-8 sm:mb-12">
           <h1 className="text-2xl sm:text-3xl font-semibold text-gray-900">Kalkulačka úspor</h1>
           <p className="mt-2 sm:mt-3 text-gray-600 text-sm sm:text-base">
