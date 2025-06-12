@@ -3,8 +3,29 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+// @ts-expect-error: Unused for now but will be used later
+const getCommonValues = (unit: 'daily' | 'weekly' | 'monthly') => {
+  switch (unit) {
+    case 'daily': return [8, 12]
+    case 'weekly': return [40, 60]
+    case 'monthly': return [160, 240]
+  }
+}
+
+// @ts-expect-error: Unused for now but will be used later
+const timeUnitLabels = {
+  daily: 'denně',
+  weekly: 'týdně',
+  monthly: 'měsíčně'
+}
+
 function App() {
   const [count, setCount] = useState(0)
+  const [hoursPerUnit, setHoursPerUnit] = useState('40')
+  const [timeUnit, setTimeUnit] = useState<'daily' | 'weekly' | 'monthly'>('weekly')
+  const [hourlyRate, setHourlyRate] = useState('300')
+
+  const savings = calculateSavings(Number(hoursPerUnit) || 0, Number(hourlyRate) || 0, timeUnit)
 
   return (
     <>
