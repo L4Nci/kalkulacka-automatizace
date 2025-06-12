@@ -3,6 +3,12 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+// @ts-ignore
+const getCommonValues = ...
+
+// @ts-ignore
+const timeUnitLabels = ...
+
 function App() {
   const [count, setCount] = useState(0)
 
