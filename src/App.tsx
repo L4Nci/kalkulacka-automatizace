@@ -55,20 +55,6 @@ function App() {
     }
   }
 
-  const getCommonValues = (unit: 'daily' | 'weekly' | 'monthly') => {
-    switch (unit) {
-      case 'daily': return [8, 12]  // běžná a prodloužená pracovní doba
-      case 'weekly': return [40, 60]  // běžný a prodloužený týden
-      case 'monthly': return [160, 240]  // plný úvazek a přesčasy
-    }
-  }
-
-  const timeUnitLabels = {
-    daily: 'denně',
-    weekly: 'týdně',
-    monthly: 'měsíčně'
-  }
-
   const savings = calculateSavings(Number(hoursPerUnit) || 0, Number(hourlyRate) || 0, timeUnit)
 
   return (
