@@ -4,11 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [hoursPerUnit, setHoursPerUnit] = useState('40')
-  const [timeUnit, setTimeUnit] = useState<'daily' | 'weekly' | 'monthly'>('weekly')
-  const [hourlyRate, setHourlyRate] = useState('300')
-
-  const savings = calculateSavings(Number(hoursPerUnit) || 0, Number(hourlyRate) || 0, timeUnit)
+  const [count, setCount] = useState(0)
 
   return (
     <>
